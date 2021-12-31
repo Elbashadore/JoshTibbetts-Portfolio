@@ -7,17 +7,15 @@
 }
 
 header {
-    display: flex;
     position: absolute;
     z-index: 1;
     top: 0;
-    width: 100%;
+    width: 112%;
     height: 75px;
     background-color: #7B7B7C;
   }
 
-  h1{
-      position:absolute ;
+  .pagetitle{
       color: #4d4d4e;
       background-color: var(--Nepal);
       margin:5px -225px 5px 0px;
@@ -27,7 +25,9 @@ header {
       padding:10px 10px 5px 25px ;
       border-radius: 2px;
     }
-
+.name{
+    font-size: 1rem;
+}
     h2{
         width: 25%;
         text-align: center;
@@ -57,7 +57,7 @@ header {
         top: 74px;
         object-fit: cover;
         object-position: 50% 50%;
-        width: 100%;
+        width: 112%;
         height: 300px;
         z-index: 1;
     }
@@ -77,3 +77,38 @@ header {
         color:#4d4d4e;
         
     }
+
+    #about-me{
+        
+        border:5px solid red;
+    }
+
+
+
+
+        /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 112%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  
