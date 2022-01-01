@@ -16,31 +16,35 @@ header {
   }
 
   .pagetitle{
+      position: relative;
       color: #4d4d4e;
       background-color: var(--Nepal);
-      margin:5px -225px 5px 0px;
-      width: 18%;
-      height: 75%;
+      height: 50px;
+      margin: 1% 1%;
       text-align: right;
-      padding:10px 10px 5px 25px ;
-      border-radius: 2px;
+      z-index: 1;
     }
 .name{
-    font-size: 1rem;
+    font-size: 2vw;
+    height: 15px;
+    padding: 5%;
 }
     h2{
-        width: 25%;
+        position:static ;
+        width: 30%;
+        height: 77%;
         text-align: center;
-        margin: 40px 35px 0px auto;
+        margin: -3% 57%;
+        z-index: 5;
+        padding: 0% 0%;
     }
 
     a{
         position: relative;
         z-index: 5;
         color: var(--Nepal);
-        font-size: 20px;
-        margin: 2px;
-        padding: auto;
+        font-size: 2vw;
+
 
     }
 
@@ -67,11 +71,10 @@ header {
         top: 265px;
         right: 50px;
         background-color: var(--Nepal);
-        width:18%;
         height: 50px;
-        padding:14px 55px;
+        padding:18px 30px;
         z-index: 2;
-        font-size: 24px;
+        font-size: 3vw;
         display: inline-block;
         white-space: nowrap;
         color:#4d4d4e;
@@ -84,31 +87,57 @@ header {
     }
 
 
+@media only screen and (min-width:320px) {
+    .name{
+        font-size: 4vw;
+    }
+    a{
+        font-size: 5vw;
+    }
+    h2{
+        margin: -12% 58%;
+    }
+    .pagetitle{
+        width: 110px;
+        padding: 2%;
+    }
 
+    h3{
+        font-size: 4vw;
+        margin:6% -10%;
+    }
+    
+}
 
-        /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
+@media only screen and (min-width:768px) {
+    .name{
+        font-size: 2vw;
     }
-  
-    /* select the last child to grow to full width if it has space to grow */
-    .card-column:last-child {
-      flex-grow: 1;
+    a{
+        font-size: 2vw;
     }
-  }
-  
-  /* media query for larger screens */
-  @media screen and (min-width: 992px) {
-    header {
-      width: 112%;
+    h2{
+        margin: -4% 59%;
     }
-  
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
+    .pagetitle{
+        width: 250px;
+        padding: 0%;
     }
-  }
-  
+    h3{
+        padding: 14px 2px;
+        margin: 4% -4%;
+    }
+   
+}
+
+@media only screen and (min-width:1440px){
+    h2{
+        margin: -3% 57%;
+    }
+    
+    h3{
+        padding:0px 2px;
+        margin: 0%;
+    }
+
+}
