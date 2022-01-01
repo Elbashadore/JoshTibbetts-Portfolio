@@ -1,9 +1,10 @@
 
 
 :root {
-    --Nepal: #839CBB;
-    --Clairvoyant: #5E0D70;
+    --Nepal: #146356;
+    --Clairvoyant: #FFF1BD;
     --White: #F2F3F4;
+    --grey: #4d4d4e;
 }
 
 header {
@@ -12,12 +13,12 @@ header {
     top: 0;
     width: 112%;
     height: 75px;
-    background-color: #7B7B7C;
+    background-color: var(--grey);
   }
 
   .pagetitle{
       position: relative;
-      color: #4d4d4e;
+      color: var(--grey);
       background-color: var(--Nepal);
       height: 50px;
       margin: 1% 1%;
@@ -56,7 +57,7 @@ header {
         color: var(--Clairvoyant)
     }
 
-    img{
+    .skyline{
         position: relative;
         top: 74px;
         object-fit: cover;
@@ -64,6 +65,14 @@ header {
         width: 112%;
         height: 300px;
         z-index: 1;
+    }
+
+    .profile-picture{
+        object-fit: cover;
+        height: 247px;
+        float: left;
+        margin: -6% 0%;
+        
     }
 
     h3{
@@ -77,15 +86,35 @@ header {
         font-size: 3vw;
         display: inline-block;
         white-space: nowrap;
-        color:#4d4d4e;
+        color:var(--grey);
         
     }
 
     #about-me{
         
-        border:5px solid red;
+        border:5px groove var(--Nepal);
+        position: relative;
+        z-index: 6;
+        margin: 5% 0%;
+        font-size: 2vw;
+        color: var(--Clairvoyant);
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(20, 99, 86, 0.3) 0%,
+            rgba(20, 99, 86, 0.6) 100%
+        );
+        white-space:pre-line ;
+        text-align: center;
     }
 
+    body{
+        background-color: var(--grey);
+    }
+
+    #subtitle{
+        text-decoration: underline;
+        text-align: center;
+    }
 
 @media only screen and (min-width:320px) {
     .name{
