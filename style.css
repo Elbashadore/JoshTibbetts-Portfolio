@@ -40,7 +40,7 @@ header {
         padding: 0% 0%;
     }
 
-    a{
+    h2 a{
         position: relative;
         z-index: 5;
         color: var(--Nepal);
@@ -69,7 +69,7 @@ header {
 
     .profile-picture{
         object-fit: cover;
-        height: 247px;
+        height: 15vw;
         float: left;
         margin: -6% 0%;
         
@@ -116,6 +116,42 @@ header {
         text-align: center;
     }
 
+    #work{
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: underline;
+        width: 100%;
+        position: relative;
+        top: 94%;
+        z-index: 10;
+        height: 800px;
+    }
+
+    .project{
+        flex: 1 1 200px;
+        justify-content: space-between;
+        border: 3px groove var(--Nepal);
+        border-radius: 2px;
+        margin: 15px;
+    }
+
+    #work .project:nth-of-type(1){
+        flex-basis: 400px;
+    }
+
+    .project img{
+        width:100%;
+        height: 100%;
+        min-width: 50px;
+        object-fit: cover;
+    }
+
+    .project a{
+        object-fit: fill;
+    }
+
+    
+
 @media only screen and (min-width:320px) {
     .name{
         font-size: 4vw;
@@ -134,6 +170,13 @@ header {
     h3{
         font-size: 4vw;
         margin:6% -10%;
+    }
+    #about-me{
+        margin:22% 0 0 0;
+    }
+    .project{
+        flex-direction: column;
+        flex: 1 1 200px;
     }
     
 }
@@ -156,10 +199,17 @@ header {
         padding: 14px 2px;
         margin: 4% -4%;
     }
+    #about-me{
+        margin: 9% 0 0 0;
+    }
+    .project{
+        flex-direction: row;
+        flex: 1 1 400px;
+    }
    
 }
 
-@media only screen and (min-width:1440px){
+@media only screen and (min-width:1080px){
     h2{
         margin: -3% 57%;
     }
@@ -167,6 +217,20 @@ header {
     h3{
         padding:0px 2px;
         margin: 0%;
+    }
+
+    .pagetitle{
+        padding: 0% 15px 0% 0px;
+    }
+    #about-me{
+        margin:5% 0 0 0  ;
+    }
+    .project{
+        flex-direction: row;
+        flex: 1 1 300px;
+    }
+    .highlight{
+        flex-basis: 100%;
     }
 
 }
