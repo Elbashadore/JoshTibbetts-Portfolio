@@ -2,9 +2,14 @@
 
 :root {
     --Nepal: #146356;
-    --Clairvoyant: #FFF1BD;
+    --Clairvoyant: #ECB365;
     --White: #F2F3F4;
-    --grey: #4d4d4e;
+    --grey: #04293A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    min-height: 100%;
 }
 
 header {
@@ -22,13 +27,13 @@ header {
       background-color: var(--Nepal);
       height: 50px;
       margin: 1% 1%;
-      text-align: right;
+      text-align: left;
       z-index: 1;
     }
 .name{
-    font-size: 2vw;
+    font-size: 1vw;
     height: 15px;
-    padding: 5%;
+    padding: 5% 4px 5% 1px;
 }
     h2{
         position:static ;
@@ -81,7 +86,7 @@ header {
         right: 50px;
         background-color: var(--Nepal);
         height: 50px;
-        padding:18px 30px;
+        padding:10px 30px;
         z-index: 2;
         font-size: 3vw;
         display: inline-block;
@@ -97,18 +102,18 @@ header {
         z-index: 6;
         margin: 5% 0%;
         font-size: 2vw;
-        color: var(--Clairvoyant);
+        color: var(--Nepal);
         width: 100%;
         background-image: linear-gradient(
-            rgba(20, 99, 86, 0.3) 0%,
-            rgba(20, 99, 86, 0.6) 100%
+            rgba(6, 70, 99, 0.3) 0%,
+            rgba(6, 70, 99, 0.6) 100%
         );
         white-space:pre-line ;
         text-align: center;
     }
 
     body{
-        background-color: var(--grey);
+        background-color: rgb(255, 255, 255);
     }
 
     #subtitle{
@@ -119,37 +124,77 @@ header {
     #work{
         display: flex;
         flex-wrap: wrap;
-        text-decoration: underline;
         width: 100%;
         position: relative;
         top: 94%;
         z-index: 10;
-        height: 800px;
+        height: 600px;
     }
 
     .project{
-        flex: 1 1 200px;
+        flex: 3 1 200px;
         justify-content: space-between;
         border: 3px groove var(--Nepal);
         border-radius: 2px;
-        margin: 15px;
     }
 
-    #work .project:nth-of-type(1){
-        flex-basis: 400px;
-    }
+     
 
     .project img{
         width:100%;
         height: 100%;
         min-width: 50px;
         object-fit: cover;
+        text-align: center;
     }
 
     .project a{
         object-fit: fill;
     }
 
+   .project h4{
+        background-color: var(--Nepal);
+        color: var(--White);
+        border-radius: 15px;
+        line-height: 15px;
+        text-align: center;
+        font-size: 2vw;
+        padding-bottom: 10px;
+    }
+
+    .break{
+        flex-basis: 100%;
+        height: 0;
+    }
+
+
+
+    #contact-me{
+        display: flex;
+        width: 100%;
+        border:5px groove var(--Clairvoyant);
+        position: relative;
+        margin: 12px;
+    }
+
+    #contact-me div{
+        text-align: center;
+        background-color: var(--Nepal);
+        flex: 1 1 200px;
+    }
+
+    #contact-me a:hover{
+        color: var(--Clairvoyant);
+    }
+
+    #contact-me a{
+        padding: 0 10px;
+        color: var(--White);
+    }
+
+    #contact-me h4{
+        color: var(--White)
+    }
     
 
 @media only screen and (min-width:320px) {
@@ -175,6 +220,17 @@ header {
         margin:22% 0 0 0;
     }
     .project{
+        flex-direction: column;
+        flex: 1 1 200px;
+        margin: 4%;
+    }
+    .project h4{
+        font-size:4vw ;
+        padding: 1% 0;
+        margin: auto;
+    }
+    #contact-me{
+        position: relative;
         flex-direction: column;
         flex: 1 1 200px;
     }
@@ -206,6 +262,8 @@ header {
         flex-direction: row;
         flex: 1 1 400px;
     }
+    #contact-me{
+    }
    
 }
 
@@ -215,8 +273,9 @@ header {
     }
     
     h3{
-        padding:0px 2px;
+        padding:5px 2px;
         margin: 0%;
+        font-size: 2vw;
     }
 
     .pagetitle{
@@ -227,10 +286,22 @@ header {
     }
     .project{
         flex-direction: row;
-        flex: 1 1 300px;
+        flex: .5 1 250px;
+        margin: 18px;
     }
     .highlight{
         flex-basis: 100%;
+    }
+    .project h4{
+        font-size: 25px;
+    }
+    .project:nth-of-type(1){
+        flex-basis: 400px;
+    }
+    #contact-me{
+    }
+    .name{
+        white-space: nowrap;
     }
 
 }
